@@ -9,7 +9,6 @@ export default function read() {
         for (let i = 0; i < input.length; i += 1) {
           bufferView[i] = input.charCodeAt(i);
         }
-
         resolve(buffer);
       })(data);
     }, 1000);

@@ -13,3 +13,8 @@ test('Тест GameSavingLoader', () => GameSavingLoader.load()
       },
     });
   }));
+
+test('Тест GameSavingLoader - error', () => GameSavingLoader.load()
+  .then(null, (error) => {
+    expect(error).toThrow(new Error('Ошибка сохранения игры'));
+  }));
